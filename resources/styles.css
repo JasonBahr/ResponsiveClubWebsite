@@ -14,6 +14,10 @@ html {
   text-align: center;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 .image-gallery {
   display: flex;
   width: 100%;
@@ -21,13 +25,23 @@ html {
 }
 
 .img-container {
-  flex: 1 1 100%;
+  flex: 1 1 20%;
   overflow: hidden;
 }
 
 .img-container img {
   height: 100%;
-  width: 100%;
+  max-width: 100%;
+}
+
+@media only screen and (max-width: 770px) {
+  .image-gallery {
+    flex-wrap: wrap;
+  }
+
+  .img-container {
+    flex: 1 1 40%;
+  }
 }
 
 /* Header Styles */
@@ -40,7 +54,7 @@ header {
   justify-content: space-between;
   height: 3.75rem;
   width: 100%;
-  padding: 0 1rem;
+  padding: .5rem 1rem;
 }
 
 header a {
@@ -51,7 +65,7 @@ header a {
 }
 
 .nav-links a {
-  margin: 0 1rem 0 0;
+  margin: 0 1rem;
 }
 
 /* Banner Section Styles */
@@ -91,15 +105,28 @@ header a {
 
 /* Chapter Info Styles */
 .chapter-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   color: rgb(214, 145, 16);
   position: relative;
+  min-height: 12.5rem;
   padding: 3rem;
-  height: 12.5rem;
 }
 
 .chapter-info h3 {
   color: rgb(172, 169, 21);
-  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+@media only screen and (max-width: 1025px) {
+  .chapter-info {
+    padding: 0 2rem;
+  }
+
+  .chapter-info h3 {
+    margin-left: 1rem;
+  }
 }
 
 /* Image Banner Styles */
@@ -116,6 +143,7 @@ header a {
 }
 
 .cite {
+  font-weight: 700;
   position: relative;
   float: right;
 }
@@ -134,16 +162,26 @@ header a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 62.5rem;
-  padding: 7rem;
+  max-height: 62.5rem;
+  padding-top: 7rem;
 }
 
 .outro .img-container {
-  height: 50%;
-  width: 75%;
+  max-width: 75%;
   margin: 3rem;
 }
+.outro img {
+  max-width: 100%;
+  height: auto;
+}
 
+@media only screen and (max-width: 1025px){
+  .outro .img-container {
+    width: 80%;
+    height: auto;
+  }
+}
+/* Footer Styles */
 footer {
   background-color: rgb(60, 60, 151);
   display: flex;
@@ -151,7 +189,7 @@ footer {
   justify-content: space-between;
   height: 3.75rem;
   width: 100%;
-  padding: 0 1rem;
+  padding: 0.5rem 1rem;
 }
 
 footer a {
