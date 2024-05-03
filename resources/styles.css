@@ -44,6 +44,12 @@ html {
   }
 }
 
+@media only screen and (max-width: 426px) {
+  .image-gallery {
+    flex-direction: column;
+  }
+}
+
 /* Header Styles */
 header {
   /* position: sticky;
@@ -54,7 +60,7 @@ header {
   justify-content: space-between;
   height: 3.75rem;
   width: 100%;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
 header a {
@@ -66,6 +72,22 @@ header a {
 
 .nav-links a {
   margin: 0 1rem;
+}
+
+@media only screen and (max-width: 770px) {
+  .nav-links a {
+    margin: 0 0.5rem;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  header a {
+    font-size: 1rem;
+  }
+
+  .nav-links a {
+    margin: 0 0.25rem;
+  }
 }
 
 /* Banner Section Styles */
@@ -103,6 +125,12 @@ header a {
   color: rgb(202, 202, 202);
 }
 
+@media only screen and (max-width: 426px) {
+  .banner h1 {
+    font-size: 1.5rem;
+  }
+}
+
 /* Chapter Info Styles */
 .chapter-info {
   display: flex;
@@ -129,6 +157,18 @@ header a {
   }
 }
 
+@media only screen and (max-width: 426px) {
+  .chapter-info {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .chapter-info h3 {
+    font-size: 1rem;
+    margin: 1rem auto;
+  }
+}
+
 /* Image Banner Styles */
 .image-banner {
   min-height: 10rem;
@@ -138,7 +178,7 @@ header a {
 .quote {
   background-color: rgb(60, 60, 151);
   padding: 3rem;
-  height: 20rem;
+  min-height: 20rem;
   width: 100%;
 }
 
@@ -146,6 +186,17 @@ header a {
   font-weight: 700;
   position: relative;
   float: right;
+}
+
+@media only screen and (max-width: 426px) {
+  .quote {
+    padding: 1.5rem;
+  }
+
+  .quote h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 /* Image Gallery B Styles */
@@ -166,18 +217,39 @@ header a {
   padding-top: 7rem;
 }
 
+.outro .image-gallery {
+  align-items: center;
+  justify-content: center;
+}
+
 .outro .img-container {
-  max-width: 75%;
-  margin: 3rem;
+  margin: 3rem 0;
 }
 .outro img {
   max-width: 100%;
   height: auto;
 }
 
-@media only screen and (max-width: 1025px){
+@media only screen and (min-width: 770px) {
+  .outro .img-container {
+    max-width: 75%;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
   .outro .img-container {
     width: 80%;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .outro h1 {
+    font-size: 1.5rem;
+  }
+
+  .outro .img-container {
+    width: 100%;
     height: auto;
   }
 }
@@ -197,4 +269,14 @@ footer a {
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+@media only screen and (max-width: 426px) {
+  footer a {
+    font-size: 1rem;
+  }
+
+  .nav-links a {
+    margin: 0 0.25rem;
+  }
 }
